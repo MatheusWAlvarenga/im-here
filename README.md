@@ -16,6 +16,7 @@ List of items in a list view
 
 - React Native
 - Expo
+- TypeScript
 
 ## Project Setup
 
