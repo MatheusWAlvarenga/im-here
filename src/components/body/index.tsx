@@ -3,12 +3,12 @@ import { useContext } from 'react'
 import { Button, TextInput, View, Text } from 'react-native'
 
 // contexts
-import { ContextList } from '../../context/list'
+import { ContextList } from '../../context/list-context'
 
 // styles
 import { styles } from './styles'
 
-export default function BodyTest() {
+export default function Body() {
   const {
     member,
     handleAddMember,

@@ -6,8 +6,8 @@ import { View } from 'react-native'
 import ListContext from './src/context/list-context'
 
 // components
-import TittlePage from './src/components/header'
-import BodyTest from './src/components/body'
+import Header from './src/components/header'
+import Body from './src/components/body'
 
 // styles
 import { styles } from './styles'
@@ -16,8 +16,8 @@ export default function App() {
   return (
     <ListContext>
       <View style={styles.container}>
-        <TittlePage />
-        <BodyTest />
+        <Header />
+        <Body />
         <StatusBar style='auto' />
       </View>
     </ListContext>

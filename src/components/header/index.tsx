@@ -30,7 +30,7 @@ const months = [
   'Dezembro',
 ]
 
-export default function TittlePage() {
+export default function Header() {
   const [currentDate, setCurrentDate] = useState<string>('Nenhuma data')
 
   useEffect(() => {
