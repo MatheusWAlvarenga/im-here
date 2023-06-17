@@ -32,4 +32,6 @@ To set up and run the project, follow these steps:
 
 If you have any questions or suggestions, feel free to contact us at matheuswalvarenga@gmail.com.
 
+##
+
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
