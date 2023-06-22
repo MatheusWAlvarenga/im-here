@@ -18,7 +18,7 @@ export default function App() {
       <View style={styles.container}>
         <Header />
         <Body />
-        <StatusBar style='auto' />
+        <StatusBar style='light' />
       </View>
     </ListContext>
   )

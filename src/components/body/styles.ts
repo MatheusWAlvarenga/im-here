@@ -2,26 +2,16 @@
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
-  tittleList: {
-    color: '#FDFCFE',
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 28,
-  },
-
-  body: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    paddingVertical: 24,
-    gap: 32,
+  container: {
+    width: '100%',
+    paddingHorizontal: 16,
+    gap: 8,
   },
 
   inputArea: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'flex-start',
-    paddingHorizontal: 16,
     gap: 7,
   },
 
@@ -36,6 +26,12 @@ export const styles = StyleSheet.create({
     fontSize: 14,
   },
 
+  list: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+  },
+
   button: {
     backgroundColor: '#31CF67',
     color: '#FFF',
@@ -46,14 +42,43 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  titleList: {
+    color: '#FDFCFE',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 28,
+  },
+
+  label: {
+    color: '#FDFCFE',
+    fontSize: 14,
+    fontWeight: '300',
+  },
+
+  body: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    paddingBottom: 24,
+    gap: 30,
+  },
+
   itemsList: {
     width: '100%',
     justifyContent: 'flex-start',
     paddingHorizontal: 16,
   },
+
   content: {
-    flex: 1,
-    gap: 66,
+    maxHeight: 430,
+    minHeight: 300,
+    paddingHorizontal: 20,
+  },
+
+  emptyContainer: {
+    justifyContent: 'center',
+    alignContent: 'center',
+    height: 230,
   },
 
   empty: {
@@ -62,12 +87,11 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#FDFCFE',
     fontSize: 14,
-    marginVertical: 150,
   },
 
   memberCard: {
-    flex: 1,
     flexDirection: 'row',
+    marginVertical: 4,
   },
 
   memberName: {
@@ -88,5 +112,10 @@ export const styles = StyleSheet.create({
     width: 56,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  subTitle: {
+    flexDirection: 'row',
+    gap: 8,
   },
 })
