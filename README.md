@@ -16,7 +16,12 @@
 
 ## Objective
 
-**I'm Here** is a project developed using React Native and Expo, which demonstrates in a practical and simple way, the use of the `useContext` hook to facilitate the flow of data between components of a React Native project.
+**I'm Here** is a project developed using React Native and Expo, which demonstrates in a practical and simple way the use of the useContext hook and the DateTimePicker component with Expo.
+
+- Using React Native and Expo, showcasing the implementation of the useContext hook for efficient data flow between components.
+- Utilizing the DateTimePicker component from the @react-native-community/datetimepicker library to enhance the project's functionality.
+- Demonstrating the practical and straightforward implementation of the DateTimePicker, enabling users to seamlessly select dates and times within the React Native application.
+- Implemented the DateTimePicker component in a user-friendly manner, ensuring a smooth and intuitive user experience.
 
 ## Feature
 
