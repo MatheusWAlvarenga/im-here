@@ -1,9 +1,9 @@
 // vendors
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import { View, Text, Image } from 'react-native'
 
 // components
-import SmartTitle from '../smartTitle'
+import SmartTitle from '../form/smartTitle'
 
 // styles
 import { styles } from './styles'

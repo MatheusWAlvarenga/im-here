@@ -23,7 +23,6 @@ export default function ModalOptions() {
     handleOpenNewEvent,
     handleOpenOptions,
     openOptions,
-    openNewEvent,
     removeEvent,
   } = useContext(ContextList)
 

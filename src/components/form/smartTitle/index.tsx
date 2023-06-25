@@ -1,15 +1,15 @@
 // vendors
 import React, { useContext } from 'react'
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 
 // styles
 import { styles } from './styles'
 
 // contexts
-import { ContextList } from '../../context/list-context'
+import { ContextList } from '../../../context/list-context'
 
 // components
-import ModalOptions from '../modal/options'
+import ModalOptions from '../../modal/options'
 
 export default function SmartTitle() {
   const {
@@ -18,7 +18,6 @@ export default function SmartTitle() {
     handleOpenNewEvent,
     handleOpenOptions,
     openOptions,
-    openNewEvent,
   } = useContext(ContextList)
 
   function openNewEventClick() {
