@@ -32,7 +32,7 @@ export default function Body() {
   useEffect(() => {
     const newList = [...eventSelected.names]
     setMemberList(newList.reverse())
-  }, [eventList])
+  }, [eventList, eventSelected])
 
   function handleInputClick(item: string) {
     if (!member.length) return alert('Digite um nome')
