@@ -6,7 +6,7 @@ import {
   Alert,
   TextInput,
   Text,
-  TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native'
 
 // styles
@@ -106,12 +106,12 @@ export default function ModalAddEvent() {
           </View>
           {!datePickerActive && (
             <View style={styles.footer}>
-              <TouchableHighlight onPress={showModalControl}>
+              <TouchableOpacity onPress={showModalControl}>
                 <Text>Fechar</Text>
-              </TouchableHighlight>
-              <TouchableHighlight onPress={handleAddEvent}>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={handleAddEvent}>
                 <Text>Salvar</Text>
-              </TouchableHighlight>
+              </TouchableOpacity>
             </View>
           )}
         </View>

@@ -1,6 +1,6 @@
 // vendors
 import React, { useContext } from 'react'
-import { View, Text, TouchableHighlight, Image } from 'react-native'
+import { View, Text, TouchableOpacity, Image } from 'react-native'
 
 // styles
 import { styles } from './styles'
@@ -35,14 +35,14 @@ export default function SmartTitle() {
 
   return (
     <View style={styles.container}>
-      <TouchableHighlight
+      <TouchableOpacity
         style={styles.titleContainer}
         onPress={openNewEventClick}
       >
         <Text style={styles.title}>
           {eventList.length ? eventSelected.title : ''}
         </Text>
-      </TouchableHighlight>
+      </TouchableOpacity>
 
       {eventSelected && openOptions && <ModalOptions />}
     </View>

@@ -6,7 +6,7 @@ import {
   Alert,
   Button,
   Modal,
-  TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native'
 
 // contexts
@@ -64,9 +64,9 @@ export default function ModalOptions() {
             return (
               <View key={item.id} style={styles.itemContainer}>
                 <Button onPress={() => handleClick(item)} title={item.title} />
-                <TouchableHighlight onPress={() => handleRemoveEvent(item)}>
+                <TouchableOpacity onPress={() => handleRemoveEvent(item)}>
                   <Text style={styles.removeTextItem}>Excluir</Text>
-                </TouchableHighlight>
+                </TouchableOpacity>
               </View>
             )
           })}
