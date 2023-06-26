@@ -4,9 +4,9 @@ import {
   View,
   Text,
   Alert,
-  Button,
   Modal,
   TouchableOpacity,
+  Button,
 } from 'react-native'
 
 // contexts
@@ -15,7 +15,7 @@ import { ContextList, EventType } from '../../../context/list-context'
 // styles
 import { styles } from './styles'
 
-export default function ModalOptions() {
+export default function ModalOptionsMenu() {
   const {
     eventList,
     eventSelected,
@@ -59,17 +59,31 @@ export default function ModalOptions() {
     >
       <View style={styles.modalContainer}>
         <View style={styles.modal}>
+          <Text style={styles.title}>Eventos</Text>
           {eventList.map((item) => {
             return (
               <View key={item.id} style={styles.itemContainer}>
-                <Button onPress={() => handleClick(item)} title={item.title} />
-                <TouchableOpacity onPress={() => handleRemoveEvent(item)}>
-                  <Text style={styles.removeTextItem}>Excluir</Text>
+                <TouchableOpacity
+                  style={styles.button}
+                  onPress={() => handleClick(item)}
+                >
+                  <Text style={styles.title}>{item.title}</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.buttonRemove}
+                  onPress={() => handleRemoveEvent(item)}
+                >
+                  <Text style={styles.buttonText}>-</Text>
                 </TouchableOpacity>
               </View>
             )
           })}
-          <Button onPress={openNewEventClick} title='+ Criar Evento' />
+          <TouchableOpacity
+            style={styles.buttonLink}
+            onPress={openNewEventClick}
+          >
+            <Text style={styles.buttonLinkText}>+ Criar Evento</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </Modal>

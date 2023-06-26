@@ -1,12 +1,19 @@
 // vendors
 import { useContext, useEffect, useState } from 'react'
-import { Button, TextInput, View, Text, ScrollView, Image } from 'react-native'
+import {
+  TouchableOpacity,
+  TextInput,
+  View,
+  Text,
+  ScrollView,
+  Image,
+} from 'react-native'
 
 // contexts
 import { ContextList } from '../../context/list-context'
 
 // components
-import ModalAddEvent from '../modal/addEvent'
+import ModalAddEvent from '../modals/AddEvent'
 
 // styles
 import { styles } from './styles'
@@ -59,14 +66,13 @@ export default function Body() {
                 value={member}
                 maxLength={30}
               />
-              <View style={styles.button}>
-                <Button
-                  onPress={() => handleInputClick(member)}
-                  title='+'
-                  color='#FFF'
-                  accessibilityLabel='Add new member at list'
-                />
-              </View>
+              <TouchableOpacity
+                onPress={() => handleInputClick(member)}
+                accessibilityLabel='Add new member at list'
+                style={styles.buttonAdd}
+              >
+                <Text style={styles.buttonText}>+</Text>
+              </TouchableOpacity>
             </View>
           </View>
           <View style={styles.itemsList}>
@@ -89,14 +95,14 @@ export default function Body() {
                   return (
                     <View key={member.id} style={styles.memberCard}>
                       <Text style={styles.memberName}>{member.name}</Text>
-                      <View style={styles.buttonRemove}>
-                        <Button
-                          onPress={() => onPressRemove(member.id)}
-                          title='-'
-                          color='#FFF'
-                          accessibilityLabel='Add new member at list'
-                        />
-                      </View>
+
+                      <TouchableOpacity
+                        style={styles.buttonRemove}
+                        onPress={() => onPressRemove(member.id)}
+                        accessibilityLabel='Remove member at list'
+                      >
+                        <Text style={styles.buttonText}>-</Text>
+                      </TouchableOpacity>
                     </View>
                   )
                 })}
@@ -110,7 +116,14 @@ export default function Body() {
             resizeMode='contain'
           />
           <Text style={styles.empty}>Nenhum evento registrado</Text>
-          <Button onPress={openNewEventClick} title='+ Adicionar Evento' />
+
+          <TouchableOpacity
+            style={styles.buttonLink}
+            onPress={openNewEventClick}
+            accessibilityLabel='Add new event'
+          >
+            <Text style={styles.buttonLinkText}>+ Adicionar Evento</Text>
+          </TouchableOpacity>
         </View>
       )}
       <ModalAddEvent />

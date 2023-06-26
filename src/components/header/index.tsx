@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { View, Text, Image } from 'react-native'
 
 // components
-import SmartTitle from '../form/smartTitle'
+import SmartTitle from '../form/SmartTitle'
 
 // styles
 import { styles } from './styles'

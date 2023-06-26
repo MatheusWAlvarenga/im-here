@@ -9,7 +9,7 @@ import { styles } from './styles'
 import { ContextList } from '../../../context/list-context'
 
 // components
-import ModalOptions from '../../modal/options'
+import ModalOptions from '../../modals/OptionsMenu'
 
 export default function SmartTitle() {
   const {

@@ -6,8 +6,8 @@ import { View } from 'react-native'
 import ListContext from './src/context/list-context'
 
 // components
-import Header from './src/components/header'
-import Body from './src/components/body'
+import Header from './src/components/Header'
+import Body from './src/components/Body'
 
 // styles
 import { styles } from './styles'

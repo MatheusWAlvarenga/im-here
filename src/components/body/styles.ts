@@ -32,16 +32,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
   },
 
-  button: {
-    backgroundColor: '#31CF67',
-    color: '#FFF',
-    borderRadius: 4,
-    height: 56,
-    width: 56,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
   titleList: {
     color: '#FDFCFE',
     fontSize: 20,
@@ -98,15 +88,19 @@ export const styles = StyleSheet.create({
     flex: 1,
     height: 56,
     backgroundColor: '#1F1E25',
-    borderRadius: 4,
+    borderRadius: 6,
     paddingHorizontal: 16,
     paddingVertical: 18,
     color: '#FDFCFE',
   },
 
-  buttonRemove: {
-    backgroundColor: '#E23C44',
-    color: '#FFF',
+  subTitle: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+
+  buttonAdd: {
+    backgroundColor: '#31CF67',
     borderRadius: 4,
     height: 56,
     width: 56,
@@ -114,8 +108,27 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-  subTitle: {
-    flexDirection: 'row',
-    gap: 8,
+  buttonRemove: {
+    backgroundColor: '#E23C44',
+    borderRadius: 4,
+    height: 56,
+    width: 56,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  buttonText: {
+    color: '#FFF',
+    fontSize: 22,
+  },
+
+  buttonLink: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  buttonLinkText: {
+    color: '#0080ff',
+    textDecorationLine: 'underline',
   },
 })
