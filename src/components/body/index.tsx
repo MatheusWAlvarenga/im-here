@@ -5,8 +5,8 @@ import {
   TextInput,
   View,
   Text,
-  ScrollView,
   Image,
+  FlatList,
 } from 'react-native'
 
 // contexts
@@ -82,34 +82,35 @@ export default function Body() {
                 {memberList.length ? memberList.length : ''}
               </Text>
             </View>
-            <ScrollView
-              style={styles.content}
-              showsVerticalScrollIndicator={false}
-            >
-              {!memberList.length && (
-                <Text style={styles.empty}>
-                  Ninguém chegou no evento ainda? Adicione participantes a sua
-                  lista de presença.
-                </Text>
-              )}
 
-              {memberList.length > 0 &&
-                memberList.map((member) => {
+            {!memberList.length && (
+              <Text style={styles.empty}>
+                Ninguém chegou no evento ainda? Adicione participantes a sua
+                lista de presença.
+              </Text>
+            )}
+
+            {memberList.length > 0 && (
+              <FlatList
+                data={memberList}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({ item }) => {
                   return (
-                    <View key={member.id} style={styles.memberCard}>
-                      <Text style={styles.memberName}>{member.name}</Text>
+                    <View key={item.id} style={styles.memberCard}>
+                      <Text style={styles.memberName}>{item.name}</Text>
 
                       <TouchableOpacity
                         style={styles.buttonRemove}
-                        onPress={() => onPressRemove(member.id)}
+                        onPress={() => onPressRemove(item.id)}
                         accessibilityLabel='Remove member at list'
                       >
                         <Text style={styles.buttonText}>-</Text>
                       </TouchableOpacity>
                     </View>
                   )
-                })}
-            </ScrollView>
+                }}
+              />
+            )}
           </View>
         </>
       ) : (
