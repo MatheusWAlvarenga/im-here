@@ -82,7 +82,10 @@ export default function Body() {
                 {memberList.length ? memberList.length : ''}
               </Text>
             </View>
-            <ScrollView style={styles.content}>
+            <ScrollView
+              style={styles.content}
+              showsVerticalScrollIndicator={false}
+            >
               {!memberList.length && (
                 <Text style={styles.empty}>
                   Ninguém chegou no evento ainda? Adicione participantes a sua
