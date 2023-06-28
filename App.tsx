@@ -1,6 +1,5 @@
 // vendors
-import { StatusBar } from 'expo-status-bar'
-import { View } from 'react-native'
+import { View, StatusBar } from 'react-native'
 
 // context
 import ListContext from './src/context/list-context'
@@ -18,7 +17,11 @@ export default function App() {
       <View style={styles.container}>
         <Header />
         <Body />
-        <StatusBar style='light' />
+        <StatusBar
+          barStyle='light-content'
+          backgroundColor='transparent'
+          translucent
+        />
       </View>
     </ListContext>
   )
